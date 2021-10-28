@@ -1,0 +1,140 @@
+
+*{
+    margin:0;
+    padding:0;
+    font-style: serif;
+    --backgroundColor: #262626;
+    color:var(--backgroundColor);
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    font-size: 12px;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    height: 100vh;
+}
+
+#content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: red;
+    max-width: 400px;
+    width: 79%;
+    height: 2.7em;
+    border-radius: 10px;
+
+    
+    font-size: 6rem;
+    font-weight: 900;
+    
+    color: var(--backgroundColor);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 79%;
+}
+
+button{
+    font-size: 1.9rem;
+    font-weight: 400;
+    background-color: var(--backgroundColor);
+    color: red;
+    border-radius: 5px;
+    border: solid 1px red;
+    transition: background-color 200ms ease-in-out;
+    margin: 0 0.5rem;
+}
+
+button:hover {
+    background-color: red;
+    color: var(--backgroundColor);
+}
+
+button:focus {
+    outline: none;
+}
+
+.btn {
+    padding: .0 3rem;
+}
+
+#btn-reset {
+    width:  2.4em;
+    height: 1.7em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#btn-reset::before, #btn-reset::after {
+    content: '';
+    display: block;
+    
+}
+#btn-reset::before {
+    position: absolute;
+    
+    -ms-transform-origin-x: (-50%);
+    border-color: transparent red red red;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: .115em;
+    height: .5em;
+    width: .5em;
+    
+    transform: rotate(45deg);   
+}
+
+#btn-reset::after {
+    position: relative;
+    top: -.28em;
+    
+    
+    width: 0;
+
+    border-color: transparent transparent transparent red;
+    border-style: solid;
+    border-width: .16em 0 .16em .2em;
+    height: 0;
+}
+
+#btn-reset:hover::before {
+    border-color: transparent var(--backgroundColor) var(--backgroundColor) var(--backgroundColor);
+}
+#btn-reset:hover::after {
+    border-color: transparent transparent transparent  var(--backgroundColor);
+}
+
+
+
+@media only screen and (min-width: 415px) {
+    
+    :root{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 520px) {
+    
+    :root{
+        font-size: 16px;
+    }
+}

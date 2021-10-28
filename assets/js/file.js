@@ -56,4 +56,4 @@ function display (){
 }
 
 //add event
-btnContainer.querySelectorAll('button').forEach(btn => btn.addEventListener('click', changeValue));
+btnContainer.querySelectorAll('button').forEach(btn => btn.addEventListener('mousedown', changeValue));
